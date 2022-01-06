@@ -1,15 +1,16 @@
-let progressSpans = document.querySelectorAll(".the-progress span");
-let section = document.querySelector(".our-skills");
-let nums = document.querySelectorAll(".stats .number");
-let sectionNum = document.querySelector(".stats");
-let btn = document.querySelector(".btn-up");
+let progressSpans = document.querySelectorAll('.the-progress span');
+let section = document.querySelector('.our-skills');
+let nums = document.querySelectorAll('.stats .number');
+let sectionNum = document.querySelector('.stats');
+let btn = document.querySelector('.btn-up');
+let otherLinks = document.getElementById('other-links');
 let started = false;
 
 window.onscroll = function () {
     if (window.scrollY >= 600) {
-        btn.style.display = "block";
+        btn.style.display = 'block';
     } else {
-        btn.style.display = "none";
+        btn.style.display = 'none';
     }
     if (window.scrollY >= section.offsetTop) {
         progressSpans.forEach((span) => {
@@ -32,12 +33,20 @@ function startCount(el) {
             clearInterval(count);
         }
     }, 2000 / goal);
-};
+}
 
 btn.onclick = function () {
     window.scrollTo({
         left: 0,
         top: 0,
-        behavior: "smooth",
+        behavior: 'smooth',
     });
+};
+
+function openNav() {}
+
+function closeNav() {}
+
+document.onclick = function (e) {
+    console.log(e.target);
 };

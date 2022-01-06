@@ -134,6 +134,11 @@ ul {
     bottom: 200px;
     left: 0;
 }
+@media (max-width: 768px){
+    .dots {
+        background-image: none;
+    }
+}
   /* End Global Rules */
   /* Start Header */
 .header {
